@@ -1,0 +1,13 @@
+DEBUT vecteurx2
+	DECLARATION variables locales
+	CONSTANTE TAILLE:N <- 16
+	VAR tab:N[TAILLE]
+	VAR i:N <- 1
+	FIN DECLARATION
+
+	tab[1] <- 1
+	POUR i ALLANT DE 2 A TAILLE
+		tab[i] <- tab[i-1] * 2
+	i SUIVANT
+
+FIN vecteurx2
