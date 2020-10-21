@@ -11,10 +11,10 @@ DEBUT tableauminmax
 
 	POUR i ALLANT DE 1 A TAILLE
 		SAISIR tab[i]
-		SI tab[i] >= max 
+		SI tab[i] >= tab[posmax] 
 			posmax <- i
 
-		SI tab[i] <= min 
+		SI tab[i] <= tab[posmin] 
 			posmin <- i
 
 	i SUIVANT
