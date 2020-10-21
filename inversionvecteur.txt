@@ -1,0 +1,21 @@
+DEBUT inversionvecteur
+	VARIABLES LOCALES
+	CONSTANTE TAILLE:N <- 10
+	VAR tab:N[TAILLE]
+	VAR i:N <- 1
+	VAR temp:N <- 0
+	FIN VARIABLES LOCALES
+
+AFFICHER "ENTRER LES", TAILLE, "nombres du tableau"
+
+POUR i ALLANT DE 1 A TAILLE
+		SAISIR tab[i]
+i SUIVANT
+
+POUR i ALLANT DE 1 A TAILLE/2
+	temp <- tab[i]
+	tab[i] <- tab[TAILLE-(i-1)]
+	tab[TAILLE-(i-1)] <- temp
+i SUIVANT
+
+FIN inversionvecteur
