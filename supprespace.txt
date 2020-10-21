@@ -1,0 +1,20 @@
+DEBUT supprimerespaces
+	VARIABLES LOCALES
+	CONSTANTE TAILLE:N <- 25
+	var tab:N[TAILLE]
+	var tabcopie:N[TAILLE]
+	var i:N <- 1
+	var icopie:N <- 1
+	var car:C <- ' '
+	FIN VARIABLES LOCALES
+
+
+	POUR i ALLANT DE 1 A TAILLE
+		si tab[i] != car
+			tabcopie[icopie] <- tab[i]
+			icopie <- icopie + 1
+		FIN SI
+	
+	i SUIVANT
+
+FIN supprimerespaces
