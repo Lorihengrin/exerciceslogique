@@ -1,0 +1,21 @@
+DEBUT nombresparfaits
+	VARIABLES LOCALES
+	VAR i:N <- 0
+	VAR s:N <- 0
+	VAR j:N <- 0
+	FIN VARIABLES LOCALES
+
+	POUR i ALLANT DE 1 A 100
+		s <- 0
+		POUR j ALLANT DE 1 A (i DIV 2)
+			SI (i mod j) = 0
+			s <- s + j
+			FIN SI
+		j SUIVANT
+
+		SI s = i
+		AFFICHER i, "est un nombre parfait"
+		FIN SI
+	i SUIVANT
+
+FIN nombresparfaits
