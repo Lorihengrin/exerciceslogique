@@ -11,7 +11,7 @@ DEBUT plusoumoins
 		SI tabbool[i]
 			tabcopie[i] <- tab[i]
 		SINON
-			tabcopie[i] <- -rab[i]
+			tabcopie[i] <- -tab[i]
 		FIN SI
 
 	i SUIVANT
