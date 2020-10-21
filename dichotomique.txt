@@ -10,11 +10,11 @@ DEBUT dichotomique
 
 	// ici, valeur de N déterminée d'une manière ou d'une autre
 
-	TANT QUE n != tab[i] ET debut != FIN
+	TANT QUE debut != FIN
 		i <- (debut + fin) DIV 2
 
 		SI n > tab[i] 
-			debut <- i
+			debut <- i + 1
 
 		SINON
 			fin <- i
@@ -22,7 +22,7 @@ DEBUT dichotomique
 	FIN TANT QUE
 
 	SI n = tab [i]
-		AFFICHER n, "est placé à la position", tab[i]
+		AFFICHER n, "est placé à la position", i
 	SINON
 		AFFICHER "valeur non trouvée"
 	FIN SI
