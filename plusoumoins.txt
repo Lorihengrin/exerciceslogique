@@ -1,0 +1,19 @@
+DEBUT plusoumoins
+	VARIABLES LOCALES :
+	CONSTANTE TAILLE:N <- 10
+	VAR tab:N[TAILLE]
+	VAR tabbool:B[TAILLE]
+	VAR tabcopie:N[TAILLE]
+	VAR i:N <- 1
+	FIN VARIABLES LOCALES
+
+	POUR i ALLANT DE 1 A TAILLE
+		SI tabbool[i]
+			tabcopie[i] <- tab[i]
+		SINON
+			tabcopie[i] <- tab[i] - (tab[i] * 2)
+		FIN SI
+
+	i SUIVANT
+
+FIN plusoumoins
