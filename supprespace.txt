@@ -1,8 +1,8 @@
 DEBUT supprimerespaces
 	VARIABLES LOCALES
 	CONSTANTE TAILLE:N <- 25
-	var tab:N[TAILLE]
-	var tabcopie:N[TAILLE]
+	var tab:C[TAILLE]
+	var tabcopie:C[TAILLE]
 	var i:N <- 1
 	var icopie:N <- 1
 	var car:C <- ' '
@@ -15,6 +15,10 @@ DEBUT supprimerespaces
 			icopie <- icopie + 1
 		FIN SI
 	
+	i SUIVANT
+
+	POUR i allant de icopie A TAILLE
+		tabcopie[i] <- car
 	i SUIVANT
 
 FIN supprimerespaces
