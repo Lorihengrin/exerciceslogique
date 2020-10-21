@@ -1,0 +1,24 @@
+DEBUT tableauminmax
+	DECLARATION variables locales
+	CONSTANTE TAILLE:N <- 10
+	VAR tab:N[TAILLE]
+	VAR i:N <- 1
+	VAR posmin:N <- 1
+	VAR posmax:N <- 1
+	FIN DECLARATION
+
+	AFFICHER "ENTRER LES", TAILLE, "nombres à tester"
+
+	POUR i ALLANT DE 1 A TAILLE
+		SAISIR tab[i]
+		SI tab[i] >= max 
+			posmax <- i
+
+		SI tab[i] <= min 
+			posmin <- i
+
+	i SUIVANT
+
+	AFFICHER "Le nombre le plus grand est", tab[posmax], "et sa dernière entrée est en position", posmax, ".  Le nombre le plus petit est", tab[posmin], "et sa dernière entrée est en position", posmin
+
+FIN tableauminmax
