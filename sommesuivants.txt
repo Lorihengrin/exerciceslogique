@@ -2,14 +2,13 @@ DEBUT sommesuivants
 	VARIABLES LOCALES:
 	CONSTANTE TAILLE:N <- 10
 	VAR tab:N[TAILLE]
-	VAR tabsomme:N[TAILLE]
 	VAR i:N <- 1
 	VAR somme:N <- 0
 	FIN VARIABLES LOCALES
 
 	POUR i ALLANT DE TAILLE A 1 PAR PAS DE -1
 		somme <- somme + tab[i]
-		tabsomme[i] <- somme
+		tab[i] <- somme
 	i SUIVANT
 
 FIN sommesuivants
