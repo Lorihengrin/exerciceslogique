@@ -1,0 +1,29 @@
+DEBUT rotation
+	VARIABLES LOCALES
+		CONSTANTE taille[N]<-5
+		var tab:N[TAILLE,TAILLE]
+		var temp:N<-0
+		var tempbis:N<-0
+		var i:N<-0
+		var j:n<-0
+		var lim:n<-0
+		var max:n<-0
+	FIN VARIABLES LOCALES
+
+	lim<-TAILLE DIV 2
+	max<-TAILLE+1
+
+	POUR i ALLANT DE 1 A lim
+		POUR j ALLANT DE i A TAILLE-i
+			temp <- tab[j,max-i]
+			tab[j, max-i] <- tab[i,j]
+			tempbis <- tab[max-i, max-j]
+			tab[max-i, max-j] <- temp
+			temp <- tab[max-j, i]
+			tab[max-j, i] <- tempbis
+			tab[i,j] <- temp
+		j SUIVANT
+
+	i SUIVANT
+
+FIN rotation
