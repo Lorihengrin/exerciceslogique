@@ -1,0 +1,23 @@
+DEBUT copietableau
+	VARIABLES LOCALES
+		CONSTANTE TAILLE:N <- 16
+		CONSTANTE LIGNES:N <- 4
+		CONSTANTE COLONES:N <- 4
+
+		var tab:N[LIGNES,COLONES]
+		var tabcopie:N[TAILLE]
+		var i:N<-1
+		var j:N<-1
+		var k:N<-1
+	FIN VARIABLES LOCALES
+
+	POUR i ALLANT de 1 A LIGNES
+		j <- 1
+		POUR j ALLANT DE 1 A COLONES
+			tabcopie[k]<-tab[i,j]
+			k <- k+1
+		j SUIVANT 
+
+	i SUIVANT
+
+FIN copietableau
