@@ -1,0 +1,17 @@
+DEBUT diagonalerectangle
+	VARIABLES LOCALES
+		CONSTANTE LIGNES:N[4]
+		CONSTANTE COLONES:N[12]
+		var tab:N[LIGNES,COLONES]
+		var i:N<-1
+		var saut:N<-1
+	FIN VARIABLES LOCALES
+
+	POUR i ALLANT DE 1 A COLONES
+
+	saut <- (i DIV (COLONES DIV LIGNES))+1
+	tab[i,saut] <- 1
+	
+	i SUIVANT
+
+FIN diagonalerectangle
