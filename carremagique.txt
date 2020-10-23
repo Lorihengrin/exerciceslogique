@@ -1,0 +1,50 @@
+DEBUT carremagique
+	VARIABLES LOCALES
+		CONSTANTE TAILLE:N[9]
+		var tab:N[TAILLE,TAILLE]
+		var i:N <- 1
+		var j:N <- 1
+		var somme:N <-0
+		var sommeL:N <-0
+		var sommeDP:N <-0
+		var sommeDS:N <-0
+		var memeslignes:B <- VRAI
+		var memesdiags:B <- VRAI
+	FIN VARIABLES LOCALES
+
+	POUR j ALLANT DE 1 A TAILLE
+		somme <- somme + tab[i,j]
+	j SUIVANT
+	j<-1
+	sommeDP<-tab[1,1]
+	SommeDS<-tab[1,TAILLE]
+
+	POUR i ALLANT DE 2 A TAILLE
+		j<-1
+		sommeL <- tab[i,j]
+		POUR j ALLANT DE 1 A TAILLE
+			sommeL <- SommeL + tab[i,j]
+		j SUIVANT
+
+		SI somme != sommeL
+			memeslignes <- FAUX
+		FIN SI
+
+		sommeDP <- sommeDP + tab[i,i]
+		sommeDS <- sommeDS + tab[i,(TAILLE+1-i)]
+
+		SI somme != sommeDP OU somme != sommeDS
+			memesdiags <- FAUX
+		FIN SI
+
+	i SUIVANT
+
+	SI memeslignes ET memesdiags
+		AFFICHER "Il s'agit d'un carré parfait"
+
+	SINON
+		AFFICHER "Il ne s'agit pas d'un carré parfait"
+		
+	FIN SI
+
+FIN carremagique

@@ -1,0 +1,40 @@
+DEBUT moyenneparligne
+	VARIABLES LOCALES
+		CONSTANTE LIGNES:N[4]
+		CONSTANTE COLONES:N[4]
+		tab:N[LIGNES,COLONES]
+		var i:N<-1
+		var j:N<-1
+		var min:N<-0
+		var max:N<-0
+		var somme:N<-0
+		var moyenne:N<-0
+	FIN VARIABLES LOCALES
+
+	POUR i ALLANT DE 1 A LIGNES
+		j<-1
+		somme<-0
+		min<-tab[i,j]
+		max<-tab[i,j]
+		moyenne<-0
+
+		POUR j allant de 1 A COLONES
+			somme <- somme + tab[i,j]
+
+			SI tab[i,j] > max
+			max <- tab[i,j]
+			FIN SI
+
+			SI tab[i,j] < min
+			min <- tab[i,j]
+			FIN SI
+		j SUIVANT
+
+		moyenne <- somme/COLONES
+		AFFICHER "Le nombre le plus grand de la ligne", i, "est", max
+		AFFICHER "le nombre le plus petit de la ligne", i, "est", min
+		AFFICHER "la moyenne des nombres de la ligne", i, "est", moyenne
+
+	i SUIVANT
+
+FIN moyenneparligne
