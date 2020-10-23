@@ -18,6 +18,7 @@ DEBUT dichotomique
 
 		SINON
 			fin <- i
+		FIN SI
 
 	FIN TANT QUE
 

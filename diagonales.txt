@@ -1,24 +1,13 @@
 DEBUT diagonales
 	VARIABLES LOCALES
-		CONSTANTE LIGNES:N <- 4
-		CONSTANTE COLONES:N <- 4
-		var tab:N [LIGNES,COLONES]
+		CONSTANTE TAILLE:N <- 4
+		var tab:N [TAILLE,TAILLE]
 		var i:N <- 1
-		var j:N <- 1
 	FIN VARIABLES LOCALES
 
-	POUR i ALLANT DE 1 A LIGNES
-		j <- 1
-		POUR j ALLANT DE 1 A COLONES
-			SI i=j
-			tab[i,j] <- 1
-			FIN SI
-
-			SI i+j=5
-			tab[i,j] <-2
-
-		j SUIVANT
-
+	POUR i ALLANT DE 1 A TAILLE
+	tab[i,i]<-1
+	tab[i,(TAILLE+1-i)]<-2	
 	i SUIVANT
 
 FIN diagonales
